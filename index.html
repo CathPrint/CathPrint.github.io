@@ -488,8 +488,8 @@
     -ms-transform: translate(-50%, -50%);
   }
   .modal a.close-modal{
-    top: -5px;
-    right: -5px;
+    top: 3px;
+    right: 3px;
   }
 
   </style>
@@ -1072,9 +1072,12 @@ $(document).ready(function(){
             $('#cathv').trigger('pause');
         }
 
-        $('.close-modal').on('click', function() {
+        $('.close-modal ').on('click', function() {
           $('#cathv').trigger('pause');
         });
+        $(".modal").on("hidden.bs.modal", function () {
+  $('#cathv').trigger('pause');
+});
 </script>
 
 </body>
